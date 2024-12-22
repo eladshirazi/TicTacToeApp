@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFA500">
+
+    <GridLayout
+        android:id="@+id/gameBoard"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="#FFA500"
+        android:columnCount="3"
+        android:padding="8dp"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn0"
+            style="@style/GameButton" />
+
+        <Button
+            android:id="@+id/btn1"
+            style="@style/GameButton" />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/GameButton" />
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/GameButton" />
+
+        <Button
+            android:id="@+id/btn4"
+            style="@style/GameButton" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/GameButton" />
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/GameButton" />
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/GameButton" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/GameButton" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gameBoard" />
+
+    <ImageView
+        android:id="@+id/trophyIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/award"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/statusText"
+        app:layout_constraintLeft_toRightOf="@id/statusText"
+        app:layout_constraintTop_toTopOf="@id/statusText" />
+
+    <Button
+        android:id="@+id/playAgainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Play Again"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
